@@ -15,12 +15,12 @@
         <img class="header__logo" src="images/city.png" alt="iconic view of a cityscape">
         <h1 class="header__title">
           The Brighton Times
-        </h1>
+				</h1>
+				<div  class="hamburger"><a id='hamburger' href="#">☰</a></div>
       </div>
     </header>
 
     <nav id="drawer" class="nav">
-			<div class="hamburger"><a href="#">☰</a></div>
       <ul class="nav__list">
         <li class="nav__item"><a href="#">News</a></li>
         <li class="nav__item"><a href="#">Events</a></li>
@@ -180,5 +180,16 @@
         </ul>
       </footer>
     </main>
-  </body>
+	</body>
+	<script>
+		document.getElementById('hamburger').onclick = function () {
+			const drawer = document.getElementById('drawer');
+			if (drawer.style.display !== 'none') {
+				drawer.style.display = 'none';
+			}
+			else {
+				drawer.style.display = 'block';
+			}
+		};	
+	</script>
 </html>
