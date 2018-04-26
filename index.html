@@ -182,13 +182,18 @@
     </main>
 	</body>
 	<script>
+		let toggled = true;
 		document.getElementById('hamburger').onclick = function () {
 			const drawer = document.getElementById('drawer');
-			if (drawer.style.display !== 'none') {
-				drawer.style.display = 'none';
-			}
+			
+			if (toggled) {
+				drawer.style.transform = 'translateX(0px)';
+				toggled = false;
+			} 
 			else {
-				drawer.style.display = 'block';
+				drawer.style.transform = 'translateX(200px)';
+				toggled = true;
+			
 			}
 		};	
 	</script>
