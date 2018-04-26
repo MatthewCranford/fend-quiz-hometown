@@ -49,13 +49,16 @@ ul {
 .header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   min-height: 56px;
-  transition: min-height 0.3s;
+	transition: min-height 0.3s;
+
 }
 
 .header__inner {
   width: 100%;
   margin-left: auto;
-  margin-right: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: nowrap;
 }
 
 .header__logo {
@@ -67,7 +70,7 @@ ul {
 
 .header__title {
   font-weight: 300;
-  font-size: 4em;
+  font-size: 3em;
   margin: 0.5em 0.25em;
   display: inline-block;
   color: #212121;
@@ -83,14 +86,31 @@ ul {
 .nav {
   width: 100%;
   margin-left: auto;
-  margin-right: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .nav__list {
   width: 100%;
   padding: 0;
-  margin: 0;
+	margin: 0;
+	display: none;
 }
+
+.hamburger {
+	padding: 24px;
+	line-height: 24px;
+	font-size: 3em;
+}
+
+.hamburger a {
+	text-decoration: none;
+	color: #616161;
+	cursor: pointer;
+}
+
+
 
 .nav__item {
   box-sizing: border-box;
@@ -102,7 +122,7 @@ ul {
 	text-transform: uppercase;
 }
 
-.nav a {
+.nav nav__item a {
   text-decoration: none;
 	color: #616161;
 	padding: 1.5em;
@@ -373,4 +393,33 @@ footer a {
   text-decoration: none;
 	color: #333;
 	padding: 1.5em;
+}
+
+@media screen and (min-width: 750px) {
+
+	.nav__list {
+		display: inline-block;
+	}
+	.hamburger {
+		display: none;
+	}
+
+	.hero {
+		width: 60%;
+	}
+	.top-news {
+		width: 40%;
+	}
+	.scores {
+    width: 50%;
+	}
+	.weather {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	main {
+		width: 1000px;
+	}
 }
