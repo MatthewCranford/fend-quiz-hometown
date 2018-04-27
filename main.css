@@ -455,17 +455,13 @@ footer a {
 				text-align: center;
 			}
 
-
-
 	.hero {
-		order: 0;
 		width: 60%;
 	}
 
 	.weather {
 		order: 1;
-		width: 40%;
-		
+		width: 40%;	
 	}
 
 	.top-news {
@@ -473,20 +469,12 @@ footer a {
 	}
 
 	.scores {
-		order: 4;
-    width: 100%;
+		order: 3;
 	}
 
-
-	.news {
-		width: 100%;
+	.recent-news {
 		order: 4;
 	}
-
-	
-
-
-
 }
 
 @media screen and (min-width: 700px) {
@@ -502,12 +490,12 @@ footer a {
 
 	.scores {
 		width: 60%;
-		order: 3;
+		order: 2;
 	}
 
 	.weather {
 		width: 40%;
-		order: 4;
+		order: 3;
 	}
 }
 
