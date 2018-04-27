@@ -489,22 +489,25 @@ footer a {
 
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
 
 	.hero {
 		width: 50%;
 	}
 
 	.top-news {
+		order: 1;
 		width: 50%;
 	}
 
 	.scores {
-    width: 50%;
+		width: 60%;
+		order: 3;
 	}
 
 	.weather {
-		width: 50%;
+		width: 40%;
+		order: 4;
 	}
 }
 
