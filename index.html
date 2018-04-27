@@ -185,20 +185,14 @@
       </footer>
     </main>
 	</body>
+
 	<script>
-		let toggled = true;
-		document.getElementById('hamburger').onclick = function () {
-			const drawer = document.getElementById('drawer');
-			
-			if (toggled) {
-				drawer.style.transform = 'translateX(0px)';
-				toggled = false;
-			} 
-			else {
-				drawer.style.transform = 'translateX(200px)';
-				toggled = true;
-			
-			}
-		};	
+		// open&close hamburger menu
+		const hamburger = document.getElementById('hamburger');
+		const drawer = document.getElementById('drawer');
+
+		hamburger.addEventListener('click', function() {
+			drawer.classList.toggle('open');
+		});	
 	</script>
 </html>

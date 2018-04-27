@@ -5,9 +5,9 @@ body, html {
 	height: 100%;
 	
 	/* prevent drawer from expanding mobile page */
-	overflow-x: hidden;
+	/* overflow-x: hidden;
 	position: relative;
-	height: 100%;
+	height: 100%; */
 }
 
 body {
@@ -123,10 +123,18 @@ ul {
 	z-index: 1;
 	right: 0px;
 	transform: translate(200px);
+	-webkit-transform: translate(200px, 0);
 	transition: transform .4s ease;
-
-	
 }
+	.nav.open {
+		transform: translate(0px);
+		-webkit-transform: translate(0px, 0);
+	}
+	.nav a:hover {
+		text-decoration: underline;
+		color: #212121;
+	}
+
 	.nav__list {
 		width: 100%;
 		padding: 0;
@@ -135,6 +143,7 @@ ul {
 		flex-direction: column;
 		align-items: flex-end;
 	}
+
 		.nav__item {
 			box-sizing: border-box;
 			display: inline-block;
@@ -156,12 +165,6 @@ ul {
 				padding: 1.5em;
 				width: 100%;
 			}
-	.nav a:hover {
-		text-decoration: underline;
-		color: #212121;
-	}
-
-
 
 /*
  *
