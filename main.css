@@ -193,8 +193,17 @@ main {
 
 .hero {
 	width: 100%;
-  position: relative;
-  background-image: url("./images/dog.jpg");
+	position: relative;
+	background-image: url("./images/dog-600_1x.jpg");
+	background-image: -webkit-image-set(
+		url("./images/dog-600_1x.jpg") 1x,
+		url("./images/dog-1200_2x.jpg") 2x
+	);
+  background-image: image-set(
+		url("./images/dog-600_1x.jpg") 1x,
+		url("./images/dog-1200_2x.jpg") 2x
+	);
+	
   background-size: cover;
 	height: 300px;
 }
@@ -437,6 +446,7 @@ footer {
 footer ul {
 	display: flex;
 	justify-content: center;
+	/* flex-wrap: nowrap; */
 }
 
 footer li {
@@ -447,7 +457,7 @@ footer li {
 footer a {
   text-decoration: none;
 	color: #333;
-	padding: 1.5em;
+	width: 33%;
 }
 
 @media screen and (min-width: 600px) {
