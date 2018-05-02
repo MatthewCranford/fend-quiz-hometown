@@ -214,15 +214,15 @@ main {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   bottom: 0;
-  height: 45%;
+  height: 60%;
   width: 100%;
   color: #fff;
 	padding: 1em;
-	font-size: 12px;
+
 }
 
 .hero article p {
-	font-size: 14px;
+
 }
 
 
@@ -386,24 +386,27 @@ main {
 
 /*
  *
- * Weather
+ * Recent News
  *
  */
 
 .recent-news {
   clear: both;
-  padding: 1em;
+	padding: 2em;
 }
 
 .snippet {
-  clear: both;
-  margin: 24px 0;
+	margin: 24px 0;
+	display: flex;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
 }
 
 .snippet__thumbnail {
   width: 100px;
   float: left;
-  margin-right: 1em;
+	margin-right: 1em;
+	display: none;
 }
 
 .snippet__title {
@@ -421,18 +424,19 @@ main {
   text-decoration: underline;
 }
 
-
-/*
- *
- * Recents News
- *
- */
-
- .recent-news {
-	 font-size: 14px;
- }
-
-
+.snippet p {
+  width: 100%;
+  margin: 0;
+	padding: 1em 0 0 0em;
+	
+	/* adding "..." */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+	-webkit-line-clamp: 3; 
+	text-overflow: ellipsis;
+	max-height: 4em;
+}
 
 /*
  *
@@ -514,8 +518,11 @@ footer a {
 	}
 
 		.snippet {
-			width: 80%;
-			margin: 2rem auto;
+			float: left;
+		}
+
+		.snippet__thumbnail {
+			display: inline-block;
 		}
 }
 
