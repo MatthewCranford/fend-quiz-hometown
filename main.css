@@ -80,7 +80,7 @@ td {
 
 .header__title {
   font-weight: 300;
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.5em .5em .5em 0;
   display: inline-block;
   color: #212121;
@@ -89,7 +89,7 @@ td {
 .hamburger {
 	padding: 0 14px 0 0;
 	line-height: 24px;
-	font-size: 3em;
+	font-size: 2.5em;
 	margin-left: auto
 }
 	.hamburger a {
@@ -135,7 +135,6 @@ td {
 			box-sizing: border-box;
 			display: list-item;
 			text-align: center;
-			line-height: 24px;
 			padding: 24px;
 			text-transform: uppercase;
 			width: 100%;
@@ -150,7 +149,7 @@ td {
 	.nav a {
 		text-decoration: none;
 		color: #616161;
-		padding: 1.5em;
+		padding: 1em;
 		width: 100%;
 	}
 		.nav a:hover {
@@ -473,6 +472,10 @@ footer a {
 		display: none;
 	}
 
+	.header__title {
+		font-size: 2rem;
+	}
+
 	.nav {
 		width: 100%;
 		position: relative;
@@ -490,7 +493,7 @@ footer a {
 				width: 20%;
 				border: none;
 				text-align: center;
-				font-size: 1.4em;
+				font-size: 1em;
 				padding: 12px;
 				color: white;
 			}
@@ -523,6 +526,21 @@ footer a {
 
 		.snippet__thumbnail {
 			display: inline-block;
+			width: 30%;
+			height: 150px;
+			order: 2;
+		}
+
+		.snippet__title {
+			width: 100%;
+			order: 1;
+			margin-bottom: 1rem;
+		}
+
+		.snippet p {
+			width: 60%;
+			order: 3;
+			max-height: 3.7em;
 		}
 }
 
@@ -546,12 +564,33 @@ footer a {
 		width: 40%;
 		order: 3;
 	}
+
+	.scores {
+		font-size: 14px;
+		width: 65%;
+	}
+	.scores__location {
+		display: table-cell;
+	}
+
+	.weather {
+		font-size: 14px;
+		width: 35%;
+	}
+
 }
 
 @media screen and (min-width: 900px) {
 
 	main {
 		width: 900px;
+	}
+
+	.snippet p {
+		width: 60%;
+		order: 3;
+		max-height: 3.7em;
+		max-height: 6em;
 	}
 }
 
