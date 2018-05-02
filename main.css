@@ -12,7 +12,7 @@ body, html {
 
 body {
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 16px;
 	color: #424242;
 
 }
@@ -282,7 +282,8 @@ main {
 
 .scores {
 	width: 100%;
-  padding-top: 1em;
+	padding-top: 1em;
+	font-size: 14px;
 }
 
 .scores__table {
@@ -325,6 +326,8 @@ main {
 .scores__location {
 	display: none;
 }
+
+
 
 /*
  *
